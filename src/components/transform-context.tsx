@@ -441,7 +441,8 @@ class TransformContext extends Component<
     const { scale, positionX, positionY } = this.transformState;
     const transform = getTransformStyles(positionX, positionY, scale);
     this.contentComponent.style.transform = transform;
-
+    this.contentComponent.style.webkitTransform = transform;
+    
     this.handleRef();
   };
 
